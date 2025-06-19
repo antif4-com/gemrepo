@@ -29,4 +29,4 @@ RUN bundle install
 COPY . . 
 
 EXPOSE 9292
-CMD ["./puma"]
+CMD ["bundle","exec","puma"]
