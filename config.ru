@@ -12,4 +12,4 @@ Geminabox.allow_remote_failure = true
 use Rack::Session::Pool, expire_after: 1000
 use Rack::Protection
 
-run Rack::Cascade.new([Geminabox::Server, HealthCheck.new])
+run Rack::Cascade.new([HealthCheck.new, Geminabox::Server])
